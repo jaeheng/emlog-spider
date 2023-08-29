@@ -1,0 +1,8 @@
+.idea
+.DS_Store
+.vscode
+config.js
+log.20*
+error.20*
+node_modules/
+logs
