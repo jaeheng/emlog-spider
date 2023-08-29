@@ -2,12 +2,13 @@
 module.exports = {
   // mysql数据库
   mysql: {
-    host: '127.0.0.1',
-    user: '*',
-    password: '*',
-    database: 'hot-search',
-    prefix: 'hs_',
-    charset: 'utf8mb4_unicode_ci'
+    host: "127.0.0.1",
+    user: "root",
+    password: "123456",
+    database: "pangheng_com",
+    charset: "utf8mb4_unicode_ci",
   },
-  pageSize: 20
-}
+  db_prefix: "empro_",
+  pageSize: 20,
+  emlogPath: "/Users/zhangjiawei/workspace/emlog-test/",
+};

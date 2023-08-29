@@ -57,8 +57,6 @@ function fetch() {
       log.info("知乎热搜数据获取完毕!");
       log.summary("知乎热搜数据获取完毕!");
       let data = getPageData(html);
-      console.log(data);
-      return false;
       try {
         // 0. 获取mysql数据，根据title进行对比
         data.map((item) => {
@@ -82,4 +80,3 @@ function fetch() {
 module.exports = {
   fetch: fetch,
 };
-fetch();
