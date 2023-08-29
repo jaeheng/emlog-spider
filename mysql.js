@@ -67,7 +67,15 @@ const interfaces = {
                 config.emlogPath + "content/uploadfile/",
                 imgName
               );
-              cover = "../content/uploadfile/" + imgName;
+              const currentDate = new Date();
+              const year = currentDate.getFullYear();
+              const month = (currentDate.getMonth() + 1)
+                .toString()
+                .padStart(2, "0");
+              const day = currentDate.getDate().toString().padStart(2, "0");
+
+              cover =
+                "../content/uploadfile/" + `${year}${month}${day}/` + imgName;
             }
             interfaces.query(
               `INSERT INTO ${config.db_prefix}blog (title, date, content, excerpt, cover, sortid) VALUES ('${title}', ${now}, '${content}', '${excerpt}', '${cover}', ${sortid});`
